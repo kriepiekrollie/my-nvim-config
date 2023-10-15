@@ -1,4 +1,4 @@
-print("Welcome back <3")
+print("Welcome back ❤︎")
 
 vim.opt.encoding = "utf-8"
 
@@ -24,3 +24,4 @@ vim.opt.termguicolors = true
 vim.opt.hidden = true
 
 vim.api.nvim_set_keymap("n", "<C-t>", ":tabnew<CR>", { noremap = true })
+vim.g.mapleader = ' '

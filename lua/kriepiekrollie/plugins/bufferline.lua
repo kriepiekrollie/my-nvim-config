@@ -7,7 +7,7 @@ return {
       options = {
         mode = "tabs",
         themable = true,
-        separator_style = "slant",
+        separator_style = "slope",
         numbers = "ordinal",
         offsets = {
           {
