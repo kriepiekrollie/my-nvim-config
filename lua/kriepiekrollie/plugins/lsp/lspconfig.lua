@@ -5,7 +5,9 @@ return {
     "hrsh7th/cmp-nvim-lsp",
     { "antosha417/nvim-lsp-file-operations", config = true },
   },
+
   config = function()
+
     local lspconfig = require("lspconfig")
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
@@ -54,7 +56,7 @@ return {
       capabilities = capabilities,
       on_attach = on_attach,
     })
-    
+
     lspconfig["clangd"].setup({
       capabilities = capabilities,
       on_attach = on_attach,

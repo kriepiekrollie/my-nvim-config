@@ -5,6 +5,7 @@ return {
   dependencies = {
     "nvim-tree/nvim-web-devicons",
   },
+
   config = function()
     require("nvim-tree").setup {
       sort_by = "case_sensitive",
@@ -18,6 +19,6 @@ return {
         dotfiles = true,
       },
     }
-    vim.api.nvim_set_keymap("n", "<S-Tab>", ":NvimTreeToggle<CR>", { noremap = true })
+    vim.api.nvim_set_keymap("n", "<S-Tab>", "<CMD>NvimTreeToggle<CR>", { noremap = true })
   end,
 }
