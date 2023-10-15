@@ -1,9 +1,8 @@
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set autoindent
-set smartindent
-set relativenumber
+setlocal tabstop=4
+setlocal shiftwidth=4
+setlocal expandtab
+setlocal autoindent
+setlocal smartindent
+setlocal relativenumber
 
-set backspace=indent,eol,start
-
+setlocal backspace=indent,eol,start
