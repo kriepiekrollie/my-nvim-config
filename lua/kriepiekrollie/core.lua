@@ -19,6 +19,8 @@ vim.opt.backspace = [[indent,eol,start]]
 vim.opt.termguicolors = true
 vim.opt.hidden = true
 
+vim.opt.mouse = ""
+
 vim.g.mapleader = ' '
 local map = vim.keymap.set
 map("n", "<C-t>", ":tabnew<CR>", { noremap = true })
