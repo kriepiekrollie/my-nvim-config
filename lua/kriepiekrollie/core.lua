@@ -19,6 +19,21 @@ vim.opt.backspace = [[indent,eol,start]]
 vim.opt.termguicolors = true
 vim.opt.hidden = true
 
-vim.api.nvim_set_keymap("n", "<C-t>", ":tabnew<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "m", "<CMD>nohl<CR>", { noremap = true })
 vim.g.mapleader = ' '
+local map = vim.keymap.set
+map("n", "<C-t>", ":tabnew<CR>", { noremap = true })
+map("n", "m", "<CMD>nohl<CR>", { noremap = true })
+
+SignColumnEnabled = true
+  vim.cmd([[set signcolumn=yes]])
+
+function ToggleSignColumn()
+  SignColumnEnabled = not SignColumnEnabled
+  if SignColumnEnabled then
+    vim.cmd([[set signcolumn=yes]])
+  else
+    vim.cmd([[set signcolumn=no]])
+  end
+end
+
+map("n", "<leader>sc", ToggleSignColumn, { noremap = true, desc = "Toggle sign column." })

@@ -5,21 +5,23 @@ return {
 
   config = function()
 
+    local map = vim.keymap.set
+
     require("toggleterm").setup({
 
       on_create = function()
-        vim.api.nvim_set_keymap("n", "<S-t>", ":ToggleTerm<CR> :startinsert<CR>", { noremap = true })
+        map("n", "<S-t>", "<CMD>ToggleTerm<CR><CMD>startinsert<CR>", { noremap = true })
       end,
 
       on_exit = function()
-        vim.api.nvim_set_keymap("n", "<S-t>", ":ToggleTerm name=myTerm<CR>", { noremap = true })
+        map("n", "<S-t>", "<CMD>ToggleTerm name=Terminal<CR>", { noremap = true })
       end,
 
       direction = "float",
     })
 
-    vim.api.nvim_set_keymap("n", "<S-t>", ":ToggleTerm name=myTerm<CR>", { noremap = true })
-    vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n><CR> :ToggleTerm<CR>", { noremap = true })
+    map("n", "<S-t>", "<CMD>ToggleTerm name=Terminal<CR>", { noremap = true })
+    map("t", "<Esc>", "<C-\\><C-n><CR> <CMD>ToggleTerm<CR>", { noremap = true })
 
   end,
 }

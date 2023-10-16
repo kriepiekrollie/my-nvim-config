@@ -21,7 +21,8 @@ return {
       keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts)
     end
 
-    local capabilities = cmp_nvim_lsp.default_capabilities()
+    local capabilities = cmp_nvim_lsp.default_capabilities({
+    })
 
     local signs = { Error = "ⓧ ", Warn = "⚠ ", Hint = "ⓗ ", Info = "ⓘ " }
     for type, icon in pairs(signs) do

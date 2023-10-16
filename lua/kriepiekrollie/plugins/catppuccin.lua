@@ -21,16 +21,16 @@ return {
         percentage = 0.15
       },
 
-      no_italic = false,
+      no_italic = true,
       no_bold = false,
       no_underline = false,
       styles = {
-        comments = { "italic" },
+        comments = {},
         conditionals = {},
         loops = {},
         functions = {},
         keywords = {},
-        strings = { "italic" },
+        strings = {},
         variables = {},
         numbers = {},
         booleans = {},
