@@ -13,7 +13,7 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({{import = "kriepiekrollie.plugins"}, {import = "kriepiekrollie.plugins.lsp"}}, {
+require("lazy").setup({import = "kriepiekrollie.plugins"}, {
   checker = {
     enabled = true,
     notify = false,

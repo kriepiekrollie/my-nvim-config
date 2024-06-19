@@ -21,21 +21,9 @@ vim.opt.hidden = true
 
 vim.opt.mouse = ""
 
+vim.opt.colorcolumn = "80"
+
 vim.g.mapleader = ' '
 local map = vim.keymap.set
-map("n", "<C-t>", ":tabnew<CR>", { noremap = true })
+map("n", "<C-t>", "<CMD>tabnew<CR>", { noremap = true })
 map("n", "m", "<CMD>nohl<CR>", { noremap = true })
-
-SignColumnEnabled = true
-  vim.cmd([[set signcolumn=yes]])
-
-function ToggleSignColumn()
-  SignColumnEnabled = not SignColumnEnabled
-  if SignColumnEnabled then
-    vim.cmd([[set signcolumn=yes]])
-  else
-    vim.cmd([[set signcolumn=no]])
-  end
-end
-
-map("n", "<leader>sc", ToggleSignColumn, { noremap = true, desc = "Toggle sign column." })

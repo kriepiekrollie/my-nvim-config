@@ -6,7 +6,7 @@ return {
 	config = function()
 		require("lualine").setup {
       options = {
-        theme = "auto", --require("lualine.themes.catppuccin"),
+        theme = "auto", -- require("lualine.themes.catppuccin"),
         component_separators = {
           left = "/",
           right = "\\"

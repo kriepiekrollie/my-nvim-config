@@ -10,7 +10,7 @@ return {
     vim.g['tex_flavor'] = 'latex'                  -- how to read tex files
     vim.g['tex_indent_items'] = 1                  -- turn off enumerate indent
     vim.g['tex_indent_brace'] = 1                  -- turn off brace indent
-    vim.g['vimtex_context_pdf_viewer'] = 'okular'  -- external PDF viewer run from vimtex menu command
+    vim.g['vimtex_context_pdf_viewer'] = 'sioyek'  -- external PDF viewer run from vimtex menu command
     vim.g['vimtex_log_ignore'] = ({                -- Error suppression:
       'Underfull',
       'Overfull',

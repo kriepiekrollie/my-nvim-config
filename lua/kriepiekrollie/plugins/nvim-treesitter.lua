@@ -16,14 +16,18 @@ return {
         "html",
         "lua",
         "vim",
-        "vimdoc"
+        "vimdoc",
       },
 
       sync_install = true,
-      auto_install = true,
+      auto_install = false,
 
-      highlight = { enable = true },
-      indent = { enable = false },
+      highlight = { 
+        enable = true,
+      },
+      indent = { 
+        enable = false,
+      },
 
       incremental_selection = {
         enable = true,

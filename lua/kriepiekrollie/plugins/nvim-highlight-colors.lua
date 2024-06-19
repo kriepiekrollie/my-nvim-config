@@ -9,7 +9,7 @@ return {
     })
 
     local map = vim.keymap.set
-    map("n", "<leader>hc", colors.toggle, {
+    map("n", "<leader>hh", colors.toggle, {
       noremap = true,
       desc = "Toggle Highlighting of Colors.",
     })

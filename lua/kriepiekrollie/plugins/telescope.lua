@@ -56,7 +56,7 @@ return {
       desc = "Telescope: Find Help",
     })
 
-    map("n", "<leader>fc", builtin.colorscheme, {
+    map("n", "<leader>cc", builtin.colorscheme, {
       noremap = true,
       desc = "Telescope: Find Colorschemes",
     })

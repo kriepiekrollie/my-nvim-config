@@ -4,9 +4,8 @@ return {
 
   init = function()
     vim.o.timeout = true
-    vim.o.timeout = 300
   end,
 
-  opts = {
+  ops = {
   },
 }
