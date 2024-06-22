@@ -7,6 +7,7 @@ return {
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/nvim-cmp",
       "L3MON4D3/LuaSnip",
+      "williamboman/mason.nvim",
     },
     config = function()
       local lsp_zero = require("lsp-zero")
@@ -25,6 +26,9 @@ return {
       lspconfig.nil_ls.setup({})
       lspconfig.zls.setup({})
 
+      local mason = require("mason")
+      mason.setup()
+
       lspconfig.lua_ls.setup({
         on_init = function(client)
           local path = client.workspace_folders[1].name
@@ -37,11 +41,11 @@ return {
             },
             workspace = {
               checkThirdParty = false,
-              library = {
-                vim.env.VIMRUNTIME
-              },
+              -- library = {
+              --   vim.env.VIMRUNTIME
+              -- },
               -- pull in all of 'runtimepath'. NOTE: this is slow
-              -- library = vim.api.nvim_get_runtime_file("", true)
+              library = vim.api.nvim_get_runtime_file("", true)
             }
           })
         end,

@@ -6,6 +6,6 @@ return {
     vim.o.timeout = true
   end,
 
-  ops = {
+  opts = {
   },
 }

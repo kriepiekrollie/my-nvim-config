@@ -4,18 +4,18 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
 
 	config = function()
-		require("lualine").setup {
+		require("lualine").setup({
       options = {
         theme = "auto", -- require("lualine.themes.catppuccin"),
         component_separators = {
-          left = "/",
-          right = "\\"
+          left = "|",
+          right = "|"
         },
         section_separators = {
-          left = "",
-          right = ""
+          left = "",
+          right = ""
         },
       },
-		}
+		})
 	end,
 }
